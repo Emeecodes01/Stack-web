@@ -28,12 +28,12 @@ a :hover{
     margin-top: 15px;
 }
 
-.sign_in_btn :hover{
-    background: rgba(238, 23, 63, 0.986);
+.sign_in_btn:hover{
+    background: #b60f2d;
 }
 
-.sign_in_btn :active{
-    background: rgb(36, 153, 137);
+.sign_in_btn:active{
+    background: #188173;
 }
 
 /* HEADER STYLE */
