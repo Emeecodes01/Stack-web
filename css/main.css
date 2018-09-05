@@ -1,7 +1,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5px;
     font-size: 15px;
+    line-break: auto;
     margin: 0px;
     padding: 0px;
     background-color: aliceblue
@@ -15,7 +15,7 @@ body{
     word-wrap: break-word;
 }
 
-a :hover{
+a:hover{
     background: #E23A59;
 }
 
@@ -40,6 +40,7 @@ a :hover{
 header{
     background: #0f5e8c;
     color: #ffffff;
+    line-break: auto;
     min-height: 70px;
     padding-top: 30px;
 }

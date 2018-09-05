@@ -51,11 +51,11 @@ header{
     background: #E23A5A;
 }
 
-.sign_up_btn :hover{
+.sign_up_btn:hover{
     background: rgba(238, 23, 63, 0.986);
 }
 
-.sign_up_btn :active{
+.sign_up_btn:active{
     background: rgb(36, 153, 137);
 }
 

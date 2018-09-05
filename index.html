@@ -7,11 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stackoverflow lite | Welcome</title>
     <link rel="stylesheet" href="./css/main.css"/>
-    <link rel="script" href="./js/signIn.js"/>
+    
     <title>Stackoverflow Lite | sign in</title>
 </head>
 
 <body>
+    <!-- REF TO JAVASCRIPT FILE-->
+    <script type="text/javascript" src="./js/signIn.js"></script>
 
 
     <!-- HEADER -->
@@ -30,31 +32,27 @@
             <h1>Build to Ask questions and to get Answers</h1>
         </div>
 
-         <!-- AUTH FORM SECTION-->
+        <!-- AUTH FORM SECTION-->
         <aside id="auth_credentials">
             <div class="container">
                 <form>
                     <div>
                         <p>Enter email</p>
-                        <input type="email" placeholder="example@email.com">
+                        <input type="email" placeholder="example@email.com" id="email">
                     </div>
                     <div>
                         <p>Enter password</p>
-                        <input type="password" placeholder="password">
+                        <input type="password" placeholder="password" id="password">
                     </div>
                 </form>
-                <button class="sign_in_btn">Sign in</button>
-               
+                <button class="sign_in_btn" id="sign_in_btn1">Sign in</button>
+                
                 <div id="sign_up">
-                        <p>Don't have an Account? <a href="./sign_up.html">Sign up</a></p>
-                    </div>
+                    <p>Don't have an Account? <a href="./sign_up.html">Sign up</a></p>
+                </div>
             </div>
         </aside>
     </section>
-
-
-   
-
 
     <!-- SECTION FOR SITE INFO -->
     <section id="site_info">
@@ -84,7 +82,7 @@
     <footer>
         <p>Stackoverflow lite, emma dev &copy; 2018</p>
     </footer>
-
+    
 </body>
 
 </html>

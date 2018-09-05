@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/questions.css">
+    <title>Stackoverflow Lite | Questions</title>
+</head>
+
+
+<body>
+    
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Stackoverflow <span id="lite">Lite</span></h1>
+            </div>
+        </div>
+    </header>
+
+    
+
+    <!--Questions sections-->
+    <section>
+        <div class="container">
+            <h2>Questions</h2>
+            <ul class="question_list" id="list">
+                <!-- All list items get appended here -->
+            </ul>
+            
+        </div>
+    </section>
+
+
+
+    <!--Enter question-->
+    <section>
+        <div class="container">
+            <form>
+                <div>
+                    <textarea rows="10" cols="100" id="questions_input" placeholder="Enter your question"></textarea>
+                </div>
+                <div>
+                    <button id="ask_btn" class="ask_btn">Ask Question</button>
+                </div>
+            </form>
+
+            
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Stackoverflow lite, emma dev &copy; 2018</p>
+    </footer>
+    
+    <!-- Javascript reference file -->
+    <script type="text/javascript" src="./js/views/QuestionsItem.js"></script>
+    <script type="text/javascript" src="./js/questions.js"></script>
+</body>
+</html>
