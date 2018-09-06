@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/comment.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stackoverflow Lite | Comment</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Stackoverflow <span id="span_lite">Lite</span></h1>
+            </div>
+        </div>
+    </header>
+
+    
+    <!--Comments section-->
+    <section>
+            <div class="container">
+                <div>
+                    <h3>
+                        <p>Vote</p>
+                    </h3>
+                    <div id="vote_div">
+                        <button id="upvote">Upvote</button>
+                        <button id="downvote">Downvote</button>
+                    </div>
+
+                    <h2>Comments</h2>
+                </div>
+                <ol class="comments_list" id="list">
+                    <li class="list_item">
+                            <div class="wrapper">
+                                <div class="username_div">
+                                    <p class="user_name">Emmanuel Promise Ozibo</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor lacus quam, 
+                                    eget volutpat justo mattis mattis. Suspendisse faucibus tempor nunc, quis porttitor
+                                     tortor sollicitudin at</p>
+                            </div>
+                        </div>
+                        
+                    </li>
+                </ol>
+                
+            </div>
+        </section>
+    
+    
+        <section>
+            <div class="container">
+                <form>
+                    <div>
+                        <textarea rows="10" cols="100" id="comment_input" placeholder="Enter your comment"></textarea>
+                    </div>
+                    <div>
+                        <button id="comment_btn" class="comment_btn">Comment</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Stackoverflow lite, emma dev &copy; 2018</p>
+    </footer>
+
+    <script type="text/javascript" src="./js/comment.js"></script>
+</body>
+</html>

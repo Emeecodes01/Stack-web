@@ -10,14 +10,16 @@
 
 
 <body>
-        <!-- HEADER -->
-        <header>
-                <div class="container">
-                    <div id="branding">
-                        <h1>Stackoverflow <span id="span_lite">Lite</span></h1>
-                    </div>
+
+    <script type="text/javascript" src="./js/signUp.js"></script>
+    <!-- HEADER -->
+    <header>
+            <div class="container">
+                <div id="branding">
+                    <h1>Stackoverflow <span id="span_lite">Lite</span></h1>
                 </div>
-        </header>
+            </div>
+    </header>
 
         
     <section>
@@ -26,26 +28,21 @@
                 <form>
                     <div>
                         <p>Enter your User name</p><br>
-                        <input type="text" placeholder="username">
+                        <input type="text" placeholder="username" id="username">
                     </div>
 
                     <div>
                         <p>Enter your email</p><br>
-                        <input type="email" placeholder="example@email.com">
+                        <input type="email" placeholder="example@email.com" id="email">
                     </div>
 
                     <div>
                         <p>Enter your password</p><br>
-                        <input type="password" placeholder="password">
-                    </div>
-
-                    <div>
-                        <p>Comfirm password</p><br>
-                        <input type="password" placeholder="confirm">
+                        <input type="password" placeholder="password" id="password">
                     </div>
                 </form>
 
-                <button class="sign_up_btn">Sign up</button>
+                <button class="sign_up_btn" id="sign_up_btn">Sign up</button>
                 <p>Already have an Account? <a href="./index.html">Sign in</a></p>
             </div>
         </div>

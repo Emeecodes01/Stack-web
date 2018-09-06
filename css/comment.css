@@ -1,0 +1,114 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-break: auto;
+    margin: 0px;
+    padding: 0px;
+    background-color: aliceblue
+}
+
+/* container */
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+
+/* HEADER STYLE */
+header{
+    background: #0f5e8c;
+    color: #ffffff;
+    line-break: auto;
+    min-height: 70px;
+    padding-top: 30px;
+}
+
+#branding #span_lite{
+    color: #E23A59;
+}
+
+section #vote_div #upvote{
+    color: #ffffff;
+    background: #008000bb;
+    min-width: 100px;
+    height: 28px;
+    margin: 5px;
+    border: 0;
+}
+
+section #vote_div #upvote:hover{
+    background: #0c5e0cde;
+}
+
+section #vote_div #upvote:active{
+    background: #910b1dbb;
+}
+
+section #vote_div #downvote{
+    color: #ffffff;
+    background: #ff0000c2;
+    width: auto;
+    height: 28px;
+    margin: 5px;
+    border: 0;
+}
+
+.container #questions_input{
+    width: auto;
+}
+
+section #vote_div #downvote:hover{
+    background: #680909ee;
+}
+
+section #vote_div #downvote:active{
+    background: #115211e1;
+}
+
+.container #comment_btn{
+    color: #ffffff;
+    background: #0f5e8c;
+    min-width: 200px;
+    float: left;
+    height: 38px;
+    border: 0;
+}
+
+.wrapper{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: #e6e6e6;
+    min-width: 300px;
+    margin: 4px;
+}
+
+
+.list_item{
+    padding: 10px;
+}
+
+.username_div{
+    background: #616669;
+}
+
+.container #comment_btn:hover{
+    background: #014166
+}
+
+.container #comment_btn:active{
+    background: #E23A59;
+}
+
+.user_name{
+    color: #e6e6e6;
+}
+
+
+footer{
+    background-color: #4C3C6B;
+    padding: 20px;
+    margin-top: 15px;
+    color: #ffffff;
+    text-align: center;
+}

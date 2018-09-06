@@ -39,8 +39,13 @@ onload =async ()=>{
             const ques = jsonBody[i].question
 
             const questionItem = new QuestionItem(ques, questionId, username, (position) =>{
-                localStorage.setItem('position', position)
+                localStorage.setItem('question_id', position)
+                console.log(position)
+                const array = questions.reverse()
+                const question = array[position - 1].question
+                localStorage.setItem('question', question)
                 //go to answers page
+                window.location.href = 'file:///C:/Users/Emmanuel%20Ozibo/Desktop/Andela%20LTF%20Accessment/StackoverflowLite%20web/answers.html?'
             }).createQuestionItem()
             ul.appendChild(questionItem)
         }
