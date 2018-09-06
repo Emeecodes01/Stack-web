@@ -1,12 +1,17 @@
-onload = ()=>{
+onload =async ()=>{
     
-    const ol = document.getElementById('list')
-    
+    getComments()
 
     document.getElementById('comment_btn').addEventListener("click", () => {
-        const comment = getElementById('comment_input').value
-        //make an api call to save comment 
+        const comment = document.getElementById('comment_input').value
 
+        //make an api call to save comment 
+        const question_id = localStorage.getItem('question_id')
+        const answer_id = localStorage.getItem('answer_id')
+        const url = `http://localhost:5000/api/v1/questions/${question_id}/answers/${answer_id}/comment`
+
+        console.log(comment)
+        postAComment(url, {comment: comment})
     })
 
     document.getElementById('upvote').addEventListener("click", () => {
@@ -27,12 +32,74 @@ onload = ()=>{
 
         downVote(url)
     })
-    
-
-    //get the question and answer ids and fetch comments
 
 }
 
+getComments = async () => {
+
+    //get all the comments 
+    const question_id = localStorage.getItem('question_id')
+    const answer_id = localStorage.getItem('answer_id')
+    const url = `http://localhost:5000/api/v1/questions/${question_id}/answers/${answer_id}/comment`
+
+    try {
+        const commentResponse = await fetch(url,{
+            method: 'GET', 
+            headers: {
+                'x-auth-token':`${localStorage.getItem('token')}`
+            }
+        })
+
+        if(commentResponse.ok){
+            console.log('comment working')
+            const comments = await commentResponse.json()
+            setUpListWithData(comments)
+        }
+    } catch (error) {
+        console.log(error)
+        alert('An error occured while getting questions')
+    }
+}
+
+
+setUpListWithData = (comments) => {
+    let array = []
+    const ol = document.getElementById('list')
+
+    array =  comments.comments
+
+    for (let i = 0; i < array.length; i++) {
+        const comment = array[i].comment
+        const username = array[i].username
+        
+        const li = createListItem(comment, username)
+        ol.appendChild(li)
+    }
+}
+
+postAComment =async (url, comment) => {
+
+    try {
+        const comResponse = await fetch(url, {
+            method: 'POST', 
+            headers: {
+                'Content-Type':'application/json', 
+                'x-auth-token': `${localStorage.getItem('token')}`
+            }, 
+            body: JSON.stringify(comment)
+        })
+
+       
+
+        if(comResponse.status == 200){
+            const commentBody = await comResponse.json()
+            console.log(commentBody)
+            location.reload(true)
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 upVote = async (url) =>{
     try {
