@@ -37,6 +37,7 @@ signUpUser = async (user) => {
             const token = signUpResponse.headers.get('x-auth-token')
             localStorage.setItem('token', token)
             const signUpBody = await signUpResponse.json()
+            localStorage.setItem('user_info', JSON.stringify(signUpBody))
             location.href = 'file:///C:/Users/Emmanuel%20Ozibo/Desktop/Andela%20LTF%20Accessment/StackoverflowLite%20web/qestions.html'
             console.log(signUpBody)
         }

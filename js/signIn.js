@@ -28,7 +28,7 @@ const init = () =>{
 
             //save the token and user info for later use 
             localStorage.setItem('token', token)
-            localStorage.setItem('userInfo', jsonResponse)
+            localStorage.setItem('user_info',JSON.stringify(jsonResponse.data))
 
             //open the questions page
            // window.location.replace('file:///C:/Users/Emmanuel%20Ozibo/Desktop/Andela%20LTF%20Accessment/StackoverflowLite%20web/qestions.html?')

@@ -1,6 +1,5 @@
 onload =async ()=>{
     const questionUrl = 'http://localhost:5000/api/v1/questions'
-    //const userUrl = 'http://localhost:5000/api/v1/auth/user'
 
 
     const ul = document.getElementById('list')

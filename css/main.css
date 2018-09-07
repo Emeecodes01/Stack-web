@@ -15,6 +15,19 @@ body{
     word-wrap: break-word;
 }
 
+.container #branding #profile{
+    float: right;
+    color: #ffffff;
+}
+
+.container #branding #profile:hover{
+    color: #188173;
+}
+
+.container #branding #profile:active{
+    color: #E23A59;
+}
+
 a:hover{
     background: #E23A59;
 }
