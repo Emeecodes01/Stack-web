@@ -30,10 +30,8 @@ const init = () =>{
             localStorage.setItem('token', token)
             localStorage.setItem('user_info',JSON.stringify(jsonResponse.data))
 
-            //open the questions page
-           // window.location.replace('file:///C:/Users/Emmanuel%20Ozibo/Desktop/Andela%20LTF%20Accessment/StackoverflowLite%20web/qestions.html?')
+            //open the questio
             window.location.href = 'file:///C:/Users/Emmanuel%20Ozibo/Desktop/Andela%20LTF%20Accessment/StackoverflowLite%20web/qestions.html?'
-           // window.location.replace('../qestions.html')
         }else{
             alert(jsonResponse.message)
         }

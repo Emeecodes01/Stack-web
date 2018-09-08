@@ -33,6 +33,14 @@ onload =async ()=>{
         downVote(url)
     })
 
+    document.getElementById('accept_btn').addEventListener('click', () => {
+        const question_id = localStorage.getItem('question_id')
+        const answer_id = localStorage.getItem('answer_id')
+        const accept_url = `http://localhost:5000/api/v1/questions/${question_id}/answers/${answer_id}`
+
+        acceptAnswer(accept_url)
+    })
+
 }
 
 getComments = async () => {
@@ -175,4 +183,33 @@ createListItem = (comment, username) => {
 
 append = (parent, child) => {
     parent.appendChild(child)
+}
+
+
+
+acceptAnswer = async (url) => {
+    const acceptObj = {status: true}
+    try {
+        const acceptAnsRes =await fetch(url, {
+            method: 'PUT', 
+            headers: {
+                'Content-Type': 'application/json',
+                'x-auth-token': `${localStorage.getItem('token')}`
+            }, 
+            body: JSON.stringify(acceptObj)
+        })
+
+        if(acceptAnsRes.ok){
+            const acceptBody = await acceptAnsRes.json()
+            alert('Answer Accepted')
+            console.log(acceptBody)
+        }else if(acceptAnsRes.status === 400){
+            alert('No token provided')
+        }else{
+            alert('You are not authorized to accept this Answer')
+        }
+
+    } catch (error) {
+        console.log(error)
+    }
 }

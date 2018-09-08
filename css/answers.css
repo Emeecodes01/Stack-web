@@ -15,6 +15,27 @@ body{
     word-wrap: break-word;
 }
 
+.container #delUp_div{
+    float: right;
+}
+
+.container #delete_btn{
+    float: left;
+    border: none;
+    color: #ffffff;
+    background: #ff0000;
+}
+
+.container #delete_btn:hover{
+    background: #850808
+}
+
+.container #delete_btn:active{
+    background: #1a8f4f
+}
+
+
+
 #branding #lite{
     color: #E23A59;
 }

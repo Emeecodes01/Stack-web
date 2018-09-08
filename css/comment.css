@@ -25,6 +25,38 @@ header{
     padding-top: 30px;
 }
 
+.container #update_btn{
+    float: right;
+    border: none;
+    height: 38px;
+    color: #ffffff;
+    background: green;
+}
+
+.container #update_btn:hover{
+    background: #850808
+}
+
+.container #update_btn:active{
+    background: #1a8f4f
+}
+
+.container #accept_btn{
+    float: right;
+    border: none;
+    height: 28px;
+    color: #ffffff;
+    background: #014166
+}
+
+.container #accept_btn:hover{
+    background: #850808
+}
+
+.container #accept_btn:active{
+    background: #1a8f4f
+}
+
 #branding #span_lite{
     color: #E23A59;
 }

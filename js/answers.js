@@ -2,8 +2,9 @@ onload = async () => {
     const question = localStorage.getItem('question')
     const questionId = localStorage.getItem('question_id')
 
-    const ol = document.getElementById('answers_list')
 
+
+    const ol = document.getElementById('answers_list')
     document.getElementById('question').innerHTML = question
 
     //get all answers to a question
@@ -21,6 +22,12 @@ onload = async () => {
         postAnswer(answer)
 
     })
+
+    //delete button listener
+    document.getElementById('delete_btn').addEventListener('click', () => {
+        deleteQuestion()
+    })
+
 
     try {
         const response = await fetch(url,{
@@ -152,4 +159,39 @@ postAnswer = async (answer) => {
 
 getAnswersUrl = (questionId) =>{
     return `http://localhost:5000/api/v1/questions/${questionId}/answers`
+}
+
+
+
+deleteQuestion = async () => {
+    const questionId = localStorage.getItem('question_id')
+    const deleteurl = `http://localhost:5000/api/v1/questions/${questionId}`
+
+    try {
+        const deleteResponse =await fetch(deleteurl, {
+            method: 'DELETE', 
+            headers: {
+                'x-auth-token':`${localStorage.getItem('token')}`
+            }
+        })
+
+        if(deleteResponse.ok){
+            const deleteBody =await deleteResponse.json()
+            console.log(deleteBody)
+            alert('Question deleted')
+            location.href = 'file:///C:/Users/Emmanuel%20Ozibo/Desktop/Andela%20LTF%20Accessment/StackoverflowLite%20web/qestions.html'
+        }else if(deleteResponse.status == 401){
+            alert('No token provided!')
+        }else{
+            //no authrization
+            alert('You dont have the authorization to delete this question')
+        }
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+updateQuestion =() => {
+
 }
