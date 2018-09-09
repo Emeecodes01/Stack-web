@@ -1,6 +1,6 @@
 const init = () =>{
 
-    const url = 'http://localhost:5000/api/v1/auth/login'
+    const url = 'https://soflite.herokuapp.com/api/v1/auth/login'
 
 
     const signInBtn = document.getElementById("sign_in_btn1")
@@ -31,7 +31,7 @@ const init = () =>{
             localStorage.setItem('user_info',JSON.stringify(jsonResponse.data))
 
             //open the questio
-            window.location.href = 'file:///C:/Users/Emmanuel%20Ozibo/Desktop/Andela%20LTF%20Accessment/StackoverflowLite%20web/qestions.html?'
+            window.location.href = 'https://stormy-bayou-76678.herokuapp.com/qestions.html?'
         }else{
             alert(jsonResponse.message)
         }

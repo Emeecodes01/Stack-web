@@ -72,7 +72,6 @@ header{
 #showcase h1{
     font-size:25px;
     margin-top: 35px;
-    word-wrap: break-word;
 }
 
 #showcase #auth_credentials input[type="email"], input[type="password"]{
@@ -93,9 +92,52 @@ header{
 }
 
 #site_info .info img{
-    width: 100px;
+    width: auto;
     height: 100px;
 }
+
+@media(max-width: 760px){
+
+    #showcase #auth_credentials input[type="email"], input[type="password"]{
+        padding: 4px;
+        width: 100%;
+        height: 25px;
+        text-align: center;
+    }
+
+    /* HEADER STYLE */
+    header{
+        background: #0f5e8c;
+        color: #ffffff;
+        line-break: auto;
+        min-height: 50px;
+        padding-top: 20px;
+    }
+
+    #site_info .info{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sign_in_btn{
+        color: #ffffff;
+        border: 0;
+        height: 38px;
+        width: 100%;
+        background: #E23A59;
+        margin-top: 15px;
+    }
+
+
+    #site_info .info img{
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+
 
 footer{
     background-color: #4C3C6B;

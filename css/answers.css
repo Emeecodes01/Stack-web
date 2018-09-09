@@ -12,7 +12,6 @@ body{
     width: 80%;
     margin: auto;
     overflow: hidden;
-    word-wrap: break-word;
 }
 
 .container #delUp_div{
@@ -114,6 +113,19 @@ header{
     padding: 4px;
     font-size: 13px;
     color: red;
+}
+
+
+@media(min-width: 768px){
+
+    .wrapper{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background: #e6e6e6;
+        min-width: 0px;
+        width: 100%;
+        margin: 4px;
+    }
+
 }
 
 
