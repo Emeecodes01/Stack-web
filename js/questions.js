@@ -25,37 +25,23 @@ onload =async ()=>{
         })
 
         const jsonBody = await rawResponse.json()
-        let questionsTem = []
-        let questions = []
-
-
         console.log(`${jsonBody.length}`)
-        for(let i = 0; i < jsonBody.length; i++){
-            questions.push(jsonBody[i])
 
-            const questionId = jsonBody[i].id
-            const username = jsonBody[i].username
-            const ques = jsonBody[i].question
+        jsonBody.forEach(question => {
+            const questionId = question.id
+            const username = question.username
+            const ques = question.question
 
-            const questionItem = new QuestionItem(ques, questionId, username, (position) =>{
-                localStorage.setItem('question_id', position)
-                console.log(position)
-                const array = questions.reverse()
-                const question = array[position - 1].question
-                localStorage.setItem('question', question)
-                //go to answers page
+            const questionItem = new QuestionItem(ques, questionId, username, (quesId) => {
+                localStorage.setItem('question_id', quesId)
+                localStorage.setItem('question', ques)
                 window.location.href = 'https://stormy-bayou-76678.herokuapp.com/answers.html?'
+                console.log(quesId)
+
             }).createQuestionItem()
             ul.appendChild(questionItem)
-        }
-
-        //console.log(questionsTem)
-
-        ul.addEventListener('click', (event) => {
-            const target = getEventTarget(event)
-            const item = target.innerHTML
+        });
             
-        })
     }catch(ex){
         console.log(ex)
     }
