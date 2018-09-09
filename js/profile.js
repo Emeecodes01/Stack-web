@@ -12,8 +12,8 @@ onload = () => {
 
 
 getPlatformInfo = async () =>{
-    const urlQuestions = 'http://localhost:5000/api/v1/questions/user/questions'
-    const urlAnswers = 'http://localhost:5000/api/v1/questions/user/answers'
+    const urlQuestions = 'https://soflite.herokuapp.com/api/v1/questions/user/questions'
+    const urlAnswers = 'https://soflite.herokuapp.com/api/v1/questions/user/answers'
 
     try {
         //get all nessery stuffs here

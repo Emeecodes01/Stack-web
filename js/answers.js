@@ -8,7 +8,7 @@ onload = async () => {
     document.getElementById('question').innerHTML = question
 
     //get all answers to a question
-    const url = `http://localhost:5000/api/v1/questions/${questionId}`
+    const url = `https://soflite.herokuapp.com/api/v1/questions/${questionId}`
 
 
     const answer_btn = document.getElementById('answer_btn')
@@ -56,7 +56,7 @@ onload = async () => {
                     console.log(clickedPosition)
                     //save in local storage and then open the answers page(which shows comments)
                     localStorage.setItem('answer_id', clickedPosition)
-                    location.href = 'file:///C:/Users/Emmanuel%20Ozibo/Desktop/Andela%20LTF%20Accessment/StackoverflowLite%20web/comment.html?'
+                    location.href = 'https://stormy-bayou-76678.herokuapp.com/comment.html?'
                 })) 
 
             }
@@ -158,14 +158,14 @@ postAnswer = async (answer) => {
 }
 
 getAnswersUrl = (questionId) =>{
-    return `http://localhost:5000/api/v1/questions/${questionId}/answers`
+    return `https://soflite.herokuapp.com/api/v1/questions/${questionId}/answers`
 }
 
 
 
 deleteQuestion = async () => {
     const questionId = localStorage.getItem('question_id')
-    const deleteurl = `http://localhost:5000/api/v1/questions/${questionId}`
+    const deleteurl = `https://soflite.herokuapp.com/api/v1/questions/${questionId}`
 
     try {
         const deleteResponse =await fetch(deleteurl, {
@@ -179,7 +179,7 @@ deleteQuestion = async () => {
             const deleteBody =await deleteResponse.json()
             console.log(deleteBody)
             alert('Question deleted')
-            location.href = 'file:///C:/Users/Emmanuel%20Ozibo/Desktop/Andela%20LTF%20Accessment/StackoverflowLite%20web/qestions.html'
+            location.href = 'https://stormy-bayou-76678.herokuapp.com/qestions.html'
         }else if(deleteResponse.status == 401){
             alert('No token provided!')
         }else{

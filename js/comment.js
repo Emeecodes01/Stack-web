@@ -8,7 +8,7 @@ onload =async ()=>{
         //make an api call to save comment 
         const question_id = localStorage.getItem('question_id')
         const answer_id = localStorage.getItem('answer_id')
-        const url = `http://localhost:5000/api/v1/questions/${question_id}/answers/${answer_id}/comment`
+        const url = `https://soflite.herokuapp.com/api/v1/questions/${question_id}/answers/${answer_id}/comment`
 
         console.log(comment)
         postAComment(url, {comment: comment})
@@ -19,7 +19,7 @@ onload =async ()=>{
         console.log('upvote clicked')
         const question_id = localStorage.getItem('question_id')
         const answer_id = localStorage.getItem('answer_id')
-        const url = `http://localhost:5000/api/v1/questions/${question_id}/answers/${answer_id}/upvote`
+        const url = `https://soflite.herokuapp.com/api/v1/questions/${question_id}/answers/${answer_id}/upvote`
 
         upVote(url)
     })
@@ -28,7 +28,7 @@ onload =async ()=>{
         //make an api call to down vote
         const question_id = localStorage.getItem('question_id')
         const answer_id = localStorage.getItem('answer_id')
-        const url = `http://localhost:5000/api/v1/questions/${question_id}/answers/${answer_id}/downvote`
+        const url = `https://soflite.herokuapp.com/api/v1/questions/${question_id}/answers/${answer_id}/downvote`
 
         downVote(url)
     })
@@ -36,7 +36,7 @@ onload =async ()=>{
     document.getElementById('accept_btn').addEventListener('click', () => {
         const question_id = localStorage.getItem('question_id')
         const answer_id = localStorage.getItem('answer_id')
-        const accept_url = `http://localhost:5000/api/v1/questions/${question_id}/answers/${answer_id}`
+        const accept_url = `https://soflite.herokuapp.com/api/v1/questions/${question_id}/answers/${answer_id}`
 
         acceptAnswer(accept_url)
     })
@@ -48,7 +48,7 @@ getComments = async () => {
     //get all the comments 
     const question_id = localStorage.getItem('question_id')
     const answer_id = localStorage.getItem('answer_id')
-    const url = `http://localhost:5000/api/v1/questions/${question_id}/answers/${answer_id}/comment`
+    const url = `https://soflite.herokuapp.com/api/v1/questions/${question_id}/answers/${answer_id}/comment`
 
     try {
         const commentResponse = await fetch(url,{

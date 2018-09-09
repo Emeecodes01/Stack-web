@@ -21,7 +21,7 @@ onload = () => {
 }
 
 signUpUser = async (user) => {
-    const signUpUrl = 'http://localhost:5000/api/v1/auth/signup'
+    const signUpUrl = 'https://soflite.herokuapp.com/api/v1/auth/signup'
 
     try {
     
@@ -38,7 +38,7 @@ signUpUser = async (user) => {
             localStorage.setItem('token', token)
             const signUpBody = await signUpResponse.json()
             localStorage.setItem('user_info', JSON.stringify(signUpBody))
-            location.href = 'file:///C:/Users/Emmanuel%20Ozibo/Desktop/Andela%20LTF%20Accessment/StackoverflowLite%20web/qestions.html'
+            location.href = 'https://stormy-bayou-76678.herokuapp.com/qestions.html?'
             console.log(signUpBody)
         }
 

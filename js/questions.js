@@ -1,5 +1,5 @@
 onload =async ()=>{
-    const questionUrl = 'http://localhost:5000/api/v1/questions'
+    const questionUrl = 'https://soflite.herokuapp.com/api/v1/questions'
 
 
     const ul = document.getElementById('list')
@@ -44,7 +44,7 @@ onload =async ()=>{
                 const question = array[position - 1].question
                 localStorage.setItem('question', question)
                 //go to answers page
-                window.location.href = 'file:///C:/Users/Emmanuel%20Ozibo/Desktop/Andela%20LTF%20Accessment/StackoverflowLite%20web/answers.html?'
+                window.location.href = 'https://stormy-bayou-76678.herokuapp.com/answers.html?'
             }).createQuestionItem()
             ul.appendChild(questionItem)
         }
@@ -69,10 +69,10 @@ getEventTarget = (e) => {
 
 
 
-askQuestion  =async (question) => {
+askQuestion  = async (question) => {
     console.log('asked questions')
     console.log(question)
-    const url  = 'http://localhost:5000/api/v1/questions'
+    const url  = 'https://soflite.herokuapp.com/api/v1/questions'
 
     try {
         const response = await fetch(url,{
