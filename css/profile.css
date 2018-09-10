@@ -49,7 +49,6 @@ header{
 }
 
 .container #card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: gray;
 }
 
@@ -60,6 +59,30 @@ header{
 
 .container #card #total_answers{
     float: right;
+}
+
+@media(max-width: 768px){
+
+    .container #card #total_questions{
+        float: center;
+        width: 100%;
+    }
+
+    .container #card #total_answers{
+        float: center;
+        width: 100%;
+    }
+
+    .container #card, .container #side_bar{
+        float: center;
+        width: 100%;
+    }
+
+    .container .side{
+        float: center;
+        width: 100%;
+        padding: 10px;
+    }
 }
 
 
