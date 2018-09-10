@@ -28,9 +28,9 @@ const init = () =>{
 
             //save the token and user info for later use 
             localStorage.setItem('token', token)
-            localStorage.setItem('user_info',JSON.stringify(jsonResponse.data))
+            localStorage.setItem('user_info', JSON.stringify(jsonResponse.data))
 
-            //open the questio
+            //open the question
             window.location.href = 'https://stormy-bayou-76678.herokuapp.com/qestions.html?'
         }else{
             alert(jsonResponse.message)

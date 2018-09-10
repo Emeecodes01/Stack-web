@@ -37,7 +37,7 @@ signUpUser = async (user) => {
             const token = signUpResponse.headers.get('x-auth-token')
             localStorage.setItem('token', token)
             const signUpBody = await signUpResponse.json()
-            localStorage.setItem('user_info', JSON.stringify(signUpBody))
+            localStorage.setItem('user_info', JSON.stringify(signUpBody.data))
             location.href = 'https://stormy-bayou-76678.herokuapp.com/qestions.html?'
             console.log(signUpBody)
         }
